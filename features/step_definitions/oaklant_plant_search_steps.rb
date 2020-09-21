@@ -2,6 +2,7 @@ Given(/^user is on plant search page$/) do
   visit OakPlantSearchPage
 end
 
+
 When(/^user search for the plant (.+)$/) do |plant_name|
   on(OakPlantSearchPage).search_plant plant_name
 end
