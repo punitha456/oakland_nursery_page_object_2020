@@ -16,8 +16,8 @@ Feature: Oakland vegetable Search
     Examples:
       |vegetable_name|no_of_result|
       |carrot       | 10        |
-      |beans  | 10        |
-
+      |beans        | 10        |
+ 
   Scenario: Verify user can add the vegetables to wish list
     Given user is on vegetable search page
     When user search for the vegetable carrot
