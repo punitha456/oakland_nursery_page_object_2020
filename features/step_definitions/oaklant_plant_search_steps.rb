@@ -59,3 +59,26 @@ And(/^verify the details of the plant$/) do |table|
   end
   fail"#{expected_plant_details} is not same as #{expected_plant_details}"unless expected_plant_details == expected_plant_details
 end
+
+When(/^user verify the data can be read from yml file$/) do
+  #file_path = 'features/support/test data/test_data.yml'
+  #test_data = YAML.load_file file_path
+  # those two line moved in env file
+  $test_data[language_name]
+  $test_data[chase][id]
+  # if i want to change data temporary for ex id 400 to 333
+  file.open($file_path, 'w') {|f|
+
+    $test_data[chase][id]= 333
+    f.write ($test_data.to_yaml)}
+end
+
+And(/^verify the details of the rose are correct$/) do |plant_name|
+  $test_data[plant_name]['plant_type']
+
+  actual_plant_details = on(OakPlantSearchPage).get_plant_info
+  expected_plant_details = $test_data[plant_name]
+  expect(expected_plant_details.sort).should eql? actual_plant_details.sort
+
+
+end
