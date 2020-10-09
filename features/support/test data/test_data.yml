@@ -5,17 +5,15 @@ chase:
   language_name : ruby
 
 
-
-
 Rose:
   Plant Type: perennial
-  Plant Height: 4 feet
-  Flower Height: 6 feet
-  Spread: 24 inches
-  Sunlight: full sun
+    Plant Height: 4 feet
+    Flower Height: 6 feet
+    Spread: 24 inches
+    Sunlight: full sun
 
-  Rose:
-  Plant Type: perennial
+  Sunflower:
+  PlantType: perennial
   Plant Height: 4 feet
   Flower Height: 6 feet
   Spread: 24 inches

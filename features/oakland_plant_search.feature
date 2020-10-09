@@ -1,13 +1,14 @@
-
+@plant_search
 Feature: Oakland Plant Search
 
+  @smoke
   Scenario: Verify the user can search for the plant
     Given user is on plant search page
     When user search for the plant Rose
     Then user should see the results related to Rose
     And verify the search results count is not more than 10
 
-
+@regression
   Scenario Outline: Verify the user can search for the different plant
     Given user is on plant search page
     When user search for the plant <plant_name>
@@ -38,7 +39,7 @@ Feature: Oakland Plant Search
     When user adds the plant Rose to the wish list
     And user empty the wish list
     Then user should see the confirmation message "Your Wish List is currently empty!"
-
+@jira-3344
   Scenario: get the plant search details - Plant Type, Plant Height, Flower Height, Spread and Sunlight
     Given user is on plant search page
     When user search for the plant Rose
@@ -64,4 +65,6 @@ Feature: Oakland Plant Search
     When user search for the plant Rose
     Then user should see the results related to Rose
     And verify the details of the rose are correct
-
+@wip
+Scenario:
+  When: just for wrk in prog
